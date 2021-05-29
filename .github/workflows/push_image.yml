@@ -1,0 +1,39 @@
+name: Push image to Docker Hub
+on:
+  release:
+    types:
+      - published
+jobs:
+  Publish_To_Docker_Hub:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Checkout docker_tag repository
+      with:
+        repository: ${{ github.repository_owner }}/docker_tag
+        ref: master
+        token: ${{ secrets.token }}
+        path: .github/actions/docker_tag
+    - name: Publish to Docker Hub with tag Latest
+      uses: ./.github/actions/docker_tag
+      with:
+        username: ${{ secrets.dockerhub_username }}
+        password: ${{ secrets.docker_token }}
+        repository: moleszek/password-generator
+        tag_latest: true
+        push: true
+        github: false
+        token: ${{ secrets.token }}
+        owner: ${{ github.repository_owner }}
+    - name: Publish to Docker Hub without tag Latest
+      uses: ./.github/actions/docker_tag
+      with:
+        username: ${{ secrets.dockerhub_username }}
+        password: ${{ secrets.docker_token }}
+        repository: moleszek/password-generator
+        tag_latest: false
+        push: true
+        github: false
+        token: ${{ secrets.token }}
+        owner: ${{ github.repository_owner }}
