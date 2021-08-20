@@ -1,40 +1,26 @@
-name: Push image to Docker Hub
+name: Docker registry
 on:
   release:
     types:
-      - published
+    - published
 jobs:
-  Publish_To_Docker_Hub:
+  push_docker_image_to_dockerhub:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Checkout docker_tag repository
+    - name: Checkout ${{ github.repository }} repository
       uses: actions/checkout@v2
       with:
-        repository: ${{ github.repository_owner }}/docker_tag
-        ref: master
+        repository: ${{ github.repository }}
+        ref: main
         token: ${{ secrets.token }}
-        path: .github/actions/docker_tag
-    - name: Publish to Docker Hub with tag Latest
-      uses: ./.github/actions/docker_tag
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
       with:
-        username: ${{ secrets.dockerhub_username }}
+        username: ${{ secrets.docker_username }}
         password: ${{ secrets.docker_token }}
-        repository: moleszek/password-generator
-        tag_latest: true
-        push: true
-        github: false
-        token: ${{ secrets.token }}
-        owner: ${{ github.repository_owner }}
-    - name: Publish to Docker Hub without tag Latest
-      uses: ./.github/actions/docker_tag
+    - name: Build and push
+      uses: docker/build-push-action@v2
       with:
-        username: ${{ secrets.dockerhub_username }}
-        password: ${{ secrets.docker_token }}
-        repository: moleszek/password-generator
-        tag_latest: false
+        file: Docker/Dockerfile
         push: true
-        github: false
-        token: ${{ secrets.token }}
-        owner: ${{ github.repository_owner }}
+        tags: moleszek/password-generator:latest
