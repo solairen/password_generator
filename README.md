@@ -7,7 +7,7 @@ Simple application that generates passwords with specific lengths and special ch
 ### Language and Framework:
 
 * Language: C#
-* Framework: netCore 5.0
+* Framework: netCore 6.0
 
 #### To build docker container:
 
