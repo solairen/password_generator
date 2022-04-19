@@ -1,0 +1,22 @@
+{
+    "name": "windows-installer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "extensions": [
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "aaron-bond.better-comments",
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker",
+        "docsmsft.docs-preview",
+        "docsmsft.docs-markdown",
+        "eamodio.gitlens",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "ms-vscode.powershell"
+    ],
+    "postCreateCommand": "echo DONE!",
+    "remoteUser": "root",
+    "features": {
+        "github-cli": "latest"
+    }
+}

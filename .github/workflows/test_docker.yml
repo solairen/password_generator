@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     container: docker:stable
     steps:
-    - name: Checkout ${{ github.repository }} repository
-      uses: actions/checkout@v2
-      with:
-        repository: ${{ github.repository }}
-        ref: ${{ github.ref }}
-        token: ${{ secrets.token }}
-    - name: Build dockerfile
-      run: docker build -t password-generator -f Docker/Dockerfile .
+      - name: Checkout ${{ github.repository }} repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ github.ref }}
+          token: ${{ secrets.token }}
+      - name: Build dockerfile
+        run: docker build -t password-generator -f Docker/Dockerfile .
