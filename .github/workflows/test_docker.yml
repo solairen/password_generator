@@ -7,7 +7,7 @@ on:
     branches-ignore:
       - "main"
 jobs:
-  test_docker_image:
+  test:
     runs-on: ubuntu-latest
     container: docker:stable
     steps:

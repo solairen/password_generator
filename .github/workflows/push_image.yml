@@ -11,7 +11,7 @@ env:
   VERSION: ${{ github.event.inputs.version }}
 
 jobs:
-  push_docker_image_to_dockerhub:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Login to Docker Hub
@@ -34,7 +34,7 @@ jobs:
   notify_on_success:
     name: Send notification on success
     needs:
-      - test
+      - build
     if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
