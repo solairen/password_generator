@@ -45,7 +45,7 @@ jobs:
   notify_on_failure:
     name: Send notification on failure
     needs:
-      - test
+      - build
     if: ${{ failure() }}
     runs-on: ubuntu-latest
     steps:
