@@ -1,5 +1,5 @@
 {
-    "name": "windows-installer",
+    "name": "password_generator",
     "build": {
         "dockerfile": "Dockerfile"
     },
