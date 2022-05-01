@@ -1,7 +1,7 @@
 {
     "name": "password_generator",
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile-dev"
     },
     "extensions": [
         "ms-dotnettools.vscode-dotnet-runtime",
