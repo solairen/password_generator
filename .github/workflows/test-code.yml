@@ -24,7 +24,7 @@ jobs:
         ref: ${{ github.ref }}
         token: ${{ env.GH_TOKEN }}
     - name: Run test
-      uses: actions/setup-dotnet@v3.0.2
+      uses: actions/setup-dotnet@v3.0.3
       with:
         dotnet-version: "6.0.x"
     - run: dotnet test test/test.csproj
