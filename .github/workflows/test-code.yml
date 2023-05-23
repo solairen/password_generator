@@ -9,7 +9,6 @@ on:
       - "main"
 
 env:
-  DISCORD: ${{ secrets.discord_webhook }}
   GH_TOKEN: ${{ secrets.token }}
 
 jobs:
@@ -28,26 +27,3 @@ jobs:
       with:
         dotnet-version: "6.0.x"
     - run: dotnet test test/test.csproj
-  notify_on_success:
-    name: Send notification on success
-    needs:
-      - test
-    if: ${{ success() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ env.DISCORD }}
-          description: "Successfully tested!"
-  notify_on_failure:
-    name: Send notification on failure
-    needs:
-      - test
-    if: ${{ failure() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ env.DISCORD }}
-          status: failure
-          description: "Test failed!"
