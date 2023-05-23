@@ -7,7 +7,6 @@ on:
         required: true
 
 env:
-  DISCORD: ${{ secrets.discord_webhook }}
   VERSION: ${{ github.event.inputs.version }}
 
 jobs:
@@ -31,26 +30,3 @@ jobs:
           file: Docker/Dockerfile
           push: true
           tags: moleszek/password-generator:${{ env.VERSION }}
-  notify_on_success:
-    name: Send notification on success
-    needs:
-      - build
-    if: ${{ success() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ env.DISCORD }}
-          description: "Successfully build and push docker image to dockerhub"
-  notify_on_failure:
-    name: Send notification on failure
-    needs:
-      - build
-    if: ${{ failure() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ env.DISCORD }}
-          status: failure
-          description: "Failed to build and push docker image to dockerhub!"
