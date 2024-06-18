@@ -19,13 +19,13 @@ jobs:
           username: ${{ secrets.docker_username }}
           password: ${{ secrets.docker_token }}
       - name: Build and push with tag latest
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Docker/Dockerfile
           push: true
           tags: moleszek/password-generator:latest
       - name: Build and push with custom tag
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Docker/Dockerfile
           push: true
