@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
-
+using System.Security.Cryptography;
 namespace Test
 {
   [TestClass]
@@ -9,7 +9,7 @@ namespace Test
   {
     private const string Characters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
     private const string SpecialCharacters = "!@#$%^&*";
-    private readonly Random random = new Random();
+    private readonly RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
 
     [TestMethod]
     public void GeneratePassword_Length99_ReturnsPasswordWithLength99()
@@ -37,8 +37,9 @@ namespace Test
         availableCharacters += SpecialCharacters;
       }
 
-      string password = new string(Enumerable.Repeat(availableCharacters, length)
-          .Select(s => s[random.Next(s.Length)]).ToArray());
+      byte[] randomBytes = new byte[length];
+      rng.GetBytes(randomBytes);
+      string password = new string(randomBytes.Select(b => availableCharacters[b % availableCharacters.Length]).ToArray());
 
       return password;
     }
