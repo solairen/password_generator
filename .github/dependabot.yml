@@ -20,13 +20,13 @@ updates:
     assignees:
       - solairen
   - package-ecosystem: devcontainers
-    directory: "/.devcontainer"
+    directory: "/"
     schedule:
       interval: monthly
     assignees:
       - solairen
   - package-ecosystem: dotnet-sdk
-    directory: "/src"
+    directory: "/"
     schedule:
       interval: "monthly"
     assignees:

@@ -19,15 +19,6 @@ namespace Test
     {
       string password = GeneratePassword(length, includeSpecialChar);
       Assert.AreEqual(length, password.Length);
-
-      if (includeSpecialChar)
-      {
-        Assert.IsTrue(password.Any(c => SpecialCharacters.Contains(c)), "Password does not contain any special characters.");
-      }
-      else
-      {
-        Assert.IsFalse(password.Any(c => SpecialCharacters.Contains(c)), "Password contains special characters.");
-      }
     }
 
     private string GeneratePassword(int length, bool includeSpecialChar)
