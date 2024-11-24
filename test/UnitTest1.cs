@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace Test
 {
@@ -9,23 +10,24 @@ namespace Test
   {
     private const string Characters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
     private const string SpecialCharacters = "!@#$%^&*";
-    private readonly Random random = new Random();
+    private readonly RandomNumberGenerator rng = RandomNumberGenerator.Create();
 
-    [TestMethod]
-    public void GeneratePassword_Length99_ReturnsPasswordWithLength99()
+    [DataTestMethod]
+    [DataRow(99, false)]
+    [DataRow(6, true)]
+    public void GeneratePassword_Test(int length, bool includeSpecialChar)
     {
-      int length = 99;
-      string password = GeneratePassword(length, includeSpecialChar: false);
+      string password = GeneratePassword(length, includeSpecialChar);
       Assert.AreEqual(length, password.Length);
-    }
 
-    [TestMethod]
-    public void GeneratePassword_Length6WithSpecialChar_ReturnsPasswordWithLength6AndSpecialChar()
-    {
-      int length = 6;
-      string password = GeneratePassword(length, includeSpecialChar: true);
-      Assert.AreEqual(length, password.Length);
-      Assert.IsTrue(password.Any(c => SpecialCharacters.Contains(c)));
+      if (includeSpecialChar)
+      {
+        Assert.IsTrue(password.Any(c => SpecialCharacters.Contains(c)), "Password does not contain any special characters.");
+      }
+      else
+      {
+        Assert.IsFalse(password.Any(c => SpecialCharacters.Contains(c)), "Password contains special characters.");
+      }
     }
 
     private string GeneratePassword(int length, bool includeSpecialChar)
@@ -37,8 +39,9 @@ namespace Test
         availableCharacters += SpecialCharacters;
       }
 
-      string password = new string(Enumerable.Repeat(availableCharacters, length)
-          .Select(s => s[random.Next(s.Length)]).ToArray());
+      byte[] randomBytes = new byte[length];
+      rng.GetBytes(randomBytes);
+      string password = new string(randomBytes.Select(b => availableCharacters[b % availableCharacters.Length]).ToArray());
 
       return password;
     }
