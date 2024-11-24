@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Security.Cryptography;
 using CommandLine;
 
 namespace PasswordGenerator
@@ -22,7 +22,6 @@ namespace PasswordGenerator
 
         static void Main(string[] args)
         {
-            Random random = new Random();
             Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(options =>
             {
                 string availableCharacters = UppercaseLetters + LowercaseLetters + Digits;
@@ -32,8 +31,17 @@ namespace PasswordGenerator
                     availableCharacters += SpecialCharacters;
                 }
 
-                string password = new string(Enumerable.Repeat(availableCharacters, options.Length)
-                    .Select(s => s[random.Next(s.Length)]).ToArray());
+                char[] passwordChars = new char[options.Length];
+                byte[] randomBytes = new byte[options.Length];
+                RandomNumberGenerator.Fill(randomBytes);
+
+                for (int i = 0; i < options.Length; i++)
+                {
+                    int index = randomBytes[i] % availableCharacters.Length;
+                    passwordChars[i] = availableCharacters[index];
+                }
+
+                string password = new string(passwordChars);
 
                 Console.WriteLine($"Password length: {options.Length}");
                 Console.WriteLine($"Include special characters: {options.IncludeSpecialChar}");

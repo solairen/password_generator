@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "ms-dotnettools.csdevkit",
+    "ybaumes.highlight-trailing-white-spaces",
+    "Gruntfuggly.todo-tree",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "aaron-bond.better-comments",
+    "ms-dotnettools.csharp",
+    "ms-azuretools.vscode-docker",
+    "docsmsft.docs-preview",
+    "docsmsft.docs-markdown",
+    "eamodio.gitlens",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "ms-vscode.powershell",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "github.vscode-github-actions",
+    "GitHub.vscode-pull-request-github"
+  ]
+}

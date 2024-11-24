@@ -8,22 +8,22 @@ on:
     branches-ignore:
       - "main"
 
-env:
-  GH_TOKEN: ${{ secrets.token }}
+permissions:
+  contents: read
 
 jobs:
   test:
     name: Run test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - name: Checkout ${{ github.repository }} repository
       uses: actions/checkout@v4
       with:
         repository: ${{ github.repository }}
         ref: ${{ github.ref }}
-        token: ${{ env.GH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Run test
       uses: actions/setup-dotnet@v4.1.0
       with:
-        dotnet-version: "6.0.x"
+        dotnet-version: "9.0.x"
     - run: dotnet test test/test.csproj

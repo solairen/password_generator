@@ -7,9 +7,12 @@ on:
     branches-ignore:
       - "main"
 
+permissions:
+  contents: read
+
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     container: docker:stable
     steps:
       - name: Checkout ${{ github.repository }} repository
@@ -17,6 +20,6 @@ jobs:
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.ref }}
-          token: ${{ secrets.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build dockerfile
-        run: docker build -t password-generator -f Docker/Dockerfile .
+        run: docker build -t password-generator -f docker/Dockerfile .

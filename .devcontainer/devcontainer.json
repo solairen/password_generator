@@ -1,9 +1,31 @@
 {
-    "name": "password_generator",
-    "build": {
-        "dockerfile": "Dockerfile-dev"
-    },
-    "extensions": [
+  "name": "password generator",
+  "build": {
+    "dockerfile": "../docker/Dockerfile-dev"
+  },
+  "postCreateCommand": "echo DONE!",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/development,type=bind",
+  "workspaceFolder": "/development",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/ubuntu/.ssh,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.gnupg,target=/home/ubuntu/.gnupg,type=bind,consistency=cached"
+  ],
+  "remoteUser": "ubuntu",
+  "containerUser": "ubuntu",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          }
+        }
+      },
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ybaumes.highlight-trailing-white-spaces",
+        "Gruntfuggly.todo-tree",
         "ms-dotnettools.vscode-dotnet-runtime",
         "aaron-bond.better-comments",
         "ms-dotnettools.csharp",
@@ -12,11 +34,12 @@
         "docsmsft.docs-markdown",
         "eamodio.gitlens",
         "VisualStudioExptTeam.vscodeintellicode",
-        "ms-vscode.powershell"
-    ],
-    "postCreateCommand": "echo DONE!",
-    "remoteUser": "root",
-    "features": {
-        "github-cli": "latest"
+        "ms-vscode.powershell",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github"
+      ]
     }
+  }
 }
