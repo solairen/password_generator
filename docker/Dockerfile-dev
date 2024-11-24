@@ -17,7 +17,7 @@ LABEL release=development
 # User root user
 USER root
 
-RUN apt update && apt -y install wget git && apt autoremove -y && apt clean \
+RUN apt update && apt -y install wget git gnupg && apt autoremove -y && apt clean \
   && mkdir ${path} \
   # Install Oh-my-posh
   && wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh \

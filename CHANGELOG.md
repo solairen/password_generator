@@ -47,6 +47,7 @@
 2024-11-24
 ----------
 
+- Bump actions/setup-dotnet from 3 to 4 by @dependabot in https://github.com/solairen/password_generator/pull/98
 - Bump Microsoft.NET.Test.Sdk from 17.11.1 to 17.12.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/95
 - Fix code scanning alert no. 3: Insecure randomness by @solairen in https://github.com/solairen/password_generator/pull/97
 - Fix code scanning alert no. 1: Insecure randomness by @solairen in https://github.com/solairen/password_generator/pull/96
