@@ -17,3 +17,7 @@ updates:
     directory: "/.devcontainer"
     schedule:
       interval: monthly
+- package-ecosystem: dotnet-sdk
+  directory: "/src"
+  schedule:
+    interval: "monthly"
