@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using System.Linq;
 using CommandLine;
 
@@ -22,23 +23,34 @@ namespace PasswordGenerator
 
         static void Main(string[] args)
         {
-            Random random = new Random();
-            Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(options =>
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
             {
-                string availableCharacters = UppercaseLetters + LowercaseLetters + Digits;
-
-                if (options.IncludeSpecialChar)
+                Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(options =>
                 {
-                    availableCharacters += SpecialCharacters;
-                }
+                    string availableCharacters = UppercaseLetters + LowercaseLetters + Digits;
 
-                string password = new string(Enumerable.Repeat(availableCharacters, options.Length)
-                    .Select(s => s[random.Next(s.Length)]).ToArray());
+                    if (options.IncludeSpecialChar)
+                    {
+                        availableCharacters += SpecialCharacters;
+                    }
 
-                Console.WriteLine($"Password length: {options.Length}");
-                Console.WriteLine($"Include special characters: {options.IncludeSpecialChar}");
-                Console.WriteLine($"Password: {password}");
-            });
+                    char[] passwordChars = new char[options.Length];
+                    byte[] randomBytes = new byte[options.Length];
+                    rng.GetBytes(randomBytes);
+
+                    for (int i = 0; i < options.Length; i++)
+                    {
+                        int index = randomBytes[i] % availableCharacters.Length;
+                        passwordChars[i] = availableCharacters[index];
+                    }
+
+                    string password = new string(passwordChars);
+
+                    Console.WriteLine($"Password length: {options.Length}");
+                    Console.WriteLine($"Include special characters: {options.IncludeSpecialChar}");
+                    Console.WriteLine($"Password: {password}");
+                });
+            }
         }
     }
 }
