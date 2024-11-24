@@ -13,7 +13,7 @@ updates:
     directory: "/test"
     schedule:
       interval: monthly
-  - package-ecosystem: devcontainer
+  - package-ecosystem: devcontainers
     directory: "/.devcontainer"
     schedule:
       interval: monthly
