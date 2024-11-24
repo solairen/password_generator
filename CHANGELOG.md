@@ -15,10 +15,6 @@
 - Bump actions/checkout from 2 to 3 by @dependabot in https://github.com/solairen/password_generator/pull/4
 - Bump coverlet.collector from 3.1.0 to 3.1.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/3
 
-## New Contributors
-- @solairen made their first contribution in https://github.com/solairen/password_generator/pull/1
-- @dependabot made their first contribution in https://github.com/solairen/password_generator/pull/8
-
 2023-05-23
 ----------
 
@@ -50,6 +46,9 @@
 
 2024-11-24
 ----------
+
+- Bump Microsoft.NET.Test.Sdk from 17.11.1 to 17.12.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/95
+- Fix code scanning alert no. 3: Insecure randomness by @solairen in https://github.com/solairen/password_generator/pull/97
 - Fix code scanning alert no. 1: Insecure randomness by @solairen in https://github.com/solairen/password_generator/pull/96
 - Bump MSTest.TestAdapter from 3.0.2 to 3.0.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/36
 - Bump MSTest.TestFramework from 3.0.2 to 3.0.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/35
