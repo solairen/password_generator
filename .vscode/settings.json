@@ -1,4 +1,5 @@
 {
-    "omnisharp.useModernNet": true,
-    "iis.configDir": ""
+  "omnisharp.useModernNet": true,
+  "iis.configDir": "",
+  "editor.tabSize": 2
 }

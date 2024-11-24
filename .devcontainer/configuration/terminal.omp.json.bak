@@ -48,12 +48,12 @@
           "type": "git"
         },
         {
-            "type": "python",
+            "type": "dotnet",
             "style": "powerline",
             "powerline_symbol": "\uE0B0",
-            "foreground": "#100e23",
-            "background": "#FFD43B",
-            "template": " \uE235 {{ .Full }} ",
+            "foreground": "#000000",
+            "background": "#00ffff",
+            "template": " \uE77F {{ .Full }} ",
             "properties": {
                 "display_mode": "always"
             }
@@ -172,5 +172,5 @@
   ],
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "final_space": true,
-  "version": 1
+  "version": 2
 }

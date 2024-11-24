@@ -1,0 +1,30 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0.100-noble
+
+# Arguments
+ARG username=ubuntu
+ARG path=/development
+
+# Environment variables
+ENV USER=${username}
+ENV USERNAME=${username}
+
+LABEL org.opencontainers.image.source="https://github.com/solairen/password_generator"
+LABEL org.opencontainers.image.description="Development image"
+LABEL org.opencontainers.image.authors="Michał Oleszek solairen@solairen.tech"
+LABEL org.opencontainers.image.licenses=MIT
+LABEL release=development
+
+# User root user
+USER root
+
+RUN apt update && apt -y install wget git && apt autoremove -y && apt clean \
+  && mkdir ${path} \
+  # Install Oh-my-posh
+  && wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh \
+  && chmod +x /usr/local/bin/oh-my-posh \
+  && echo 'eval "$(oh-my-posh init bash --config' ${path}'/.devcontainer/configuration/terminal.omp.json)"' >> /home/${username}/.bashrc
+
+# Use developer user
+USER ${username}
+
+ENTRYPOINT [ "bash" ]

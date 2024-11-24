@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Security.Cryptography;
-using System.Linq;
 using CommandLine;
 
 namespace PasswordGenerator
@@ -23,34 +22,31 @@ namespace PasswordGenerator
 
         static void Main(string[] args)
         {
-            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(options =>
             {
-                Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(options =>
+                string availableCharacters = UppercaseLetters + LowercaseLetters + Digits;
+
+                if (options.IncludeSpecialChar)
                 {
-                    string availableCharacters = UppercaseLetters + LowercaseLetters + Digits;
+                    availableCharacters += SpecialCharacters;
+                }
 
-                    if (options.IncludeSpecialChar)
-                    {
-                        availableCharacters += SpecialCharacters;
-                    }
+                char[] passwordChars = new char[options.Length];
+                byte[] randomBytes = new byte[options.Length];
+                RandomNumberGenerator.Fill(randomBytes);
 
-                    char[] passwordChars = new char[options.Length];
-                    byte[] randomBytes = new byte[options.Length];
-                    rng.GetBytes(randomBytes);
+                for (int i = 0; i < options.Length; i++)
+                {
+                    int index = randomBytes[i] % availableCharacters.Length;
+                    passwordChars[i] = availableCharacters[index];
+                }
 
-                    for (int i = 0; i < options.Length; i++)
-                    {
-                        int index = randomBytes[i] % availableCharacters.Length;
-                        passwordChars[i] = availableCharacters[index];
-                    }
+                string password = new string(passwordChars);
 
-                    string password = new string(passwordChars);
-
-                    Console.WriteLine($"Password length: {options.Length}");
-                    Console.WriteLine($"Include special characters: {options.IncludeSpecialChar}");
-                    Console.WriteLine($"Password: {password}");
-                });
-            }
+                Console.WriteLine($"Password length: {options.Length}");
+                Console.WriteLine($"Include special characters: {options.IncludeSpecialChar}");
+                Console.WriteLine($"Password: {password}");
+            });
         }
     }
 }

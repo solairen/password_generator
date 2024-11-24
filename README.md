@@ -2,12 +2,12 @@
 
 ### About:
 
-Simple application that generates passwords with specific lengths and special characters.
+Simple application that generates passwords with specific lenghts and special characters.
 
 ### Language and Framework:
 
 * Language: C#
-* Framework: netCore 6.0
+* Framework: netCore 9.0
 
 #### To build docker container:
 
