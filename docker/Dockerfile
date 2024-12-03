@@ -1,5 +1,5 @@
 # Create the build environment image
-FROM mcr.microsoft.com/dotnet/sdk:9.0.100-noble as build-env
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0.100-noble AS build-env
 
 WORKDIR /app
 
