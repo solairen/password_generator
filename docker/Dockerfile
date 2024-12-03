@@ -12,7 +12,7 @@ COPY src/. ./
 RUN dotnet publish -c Release -r linux-x64 -o out
 
 # Build the runtime image
-FROM --platform=$TARGETPLATFORM mcr.microsoft.com/dotnet/runtime:9.0.0-noble
+FROM mcr.microsoft.com/dotnet/runtime:9.0.0-noble
 
 WORKDIR /app
 
