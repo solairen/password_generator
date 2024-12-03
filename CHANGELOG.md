@@ -1,3 +1,10 @@
+1.4.0 (2024-12-03)
+
+- GH-99 Modify ISSUE_TEMPLATE by @solairen in https://github.com/solairen/password_generator/pull/101
+- GH-100 Add ghcr.io as docker package by @solairen in https://github.com/solairen/password_generator/pull/102
+- GH-103 Add support for ARM by @solairen in https://github.com/solairen/password_generator/pull/104
+- GH-105 [Bug]: Wrong app version by @solairen in https://github.com/solairen/password_generator/pull/105
+
 2024-11-24
 ----------
 
