@@ -9,7 +9,7 @@ RUN dotnet restore
 
 # Copy the remaining source files and build the application
 COPY src/. ./
-RUN dotnet publish -c Release -r linux-x64 -o out
+RUN dotnet publish -c Release -o out
 
 # Build the runtime image
 FROM mcr.microsoft.com/dotnet/runtime:9.0.0-noble
