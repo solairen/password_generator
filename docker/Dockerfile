@@ -1,5 +1,5 @@
 # Create the build environment image
-FROM mcr.microsoft.com/dotnet/sdk:9.0.100-noble as build-env
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0.100-noble as build-env
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ COPY src/. ./
 RUN dotnet publish -c Release -r linux-x64 -o out
 
 # Build the runtime image
-FROM mcr.microsoft.com/dotnet/runtime:9.0.0-noble
+FROM --platform=$TARGETPLATFORM mcr.microsoft.com/dotnet/runtime:9.0.0-noble
 
 WORKDIR /app
 
