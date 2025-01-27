@@ -115,3 +115,20 @@
 - GH-100 Add ghcr.io as docker package by @solairen in https://github.com/solairen/password_generator/pull/102
 - GH-103 Add support for ARM by @solairen in https://github.com/solairen/password_generator/pull/104
 - GH-105 [Bug]: Wrong app version by @solairen in https://github.com/solairen/password_generator/pull/105
+
+## 1.5.0
+
+## What's Changed
+* Bump MSTest.TestFramework from 3.6.3 to 3.6.4 in /test by @dependabot in https://github.com/solairen/password_generator/pull/107
+* Bump MSTest.TestAdapter from 3.6.3 to 3.6.4 in /test by @dependabot in https://github.com/solairen/password_generator/pull/108
+* Bump MSTest.TestFramework from 3.6.4 to 3.7.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/109
+* Bump MSTest.TestAdapter from 3.6.4 to 3.7.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/110
+* Bump coverlet.collector from 6.0.2 to 6.0.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/111
+* Bump MSTest.TestAdapter from 3.7.0 to 3.7.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/114
+* Bump MSTest.TestFramework from 3.7.0 to 3.7.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/113
+* Bump coverlet.collector from 6.0.3 to 6.0.4 in /test by @dependabot in https://github.com/solairen/password_generator/pull/112
+* Bump MSTest.TestAdapter from 3.7.1 to 3.7.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/115
+* Bump MSTest.TestFramework from 3.7.1 to 3.7.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/116
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.4.0...1.5.0
