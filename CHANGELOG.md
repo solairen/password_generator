@@ -1,9 +1,48 @@
-1.4.0 (2024-12-03)
+2021-05-29
+----------
 
-- GH-99 Modify ISSUE_TEMPLATE by @solairen in https://github.com/solairen/password_generator/pull/101
-- GH-100 Add ghcr.io as docker package by @solairen in https://github.com/solairen/password_generator/pull/102
-- GH-103 Add support for ARM by @solairen in https://github.com/solairen/password_generator/pull/104
-- GH-105 [Bug]: Wrong app version by @solairen in https://github.com/solairen/password_generator/pull/105
+- Initial release
+
+2022-05-01
+----------
+
+- changed workflow by @solairen in https://github.com/solairen/password_generator/pull/1
+- Changed netCore to 6.0 by @solairen in https://github.com/solairen/password_generator/pull/2
+- Bump MSTest.TestFramework from 2.2.7 to 2.2.10 in /test by @dependabot in https://github.com/solairen/password_generator/pull/8
+- Bump MSTest.TestAdapter from 2.2.7 to 2.2.10 in /test by @dependabot in https://github.com/solairen/password_generator/pull/7
+- Bump github/codeql-action from 1 to 2 by @dependabot in https://github.com/solairen/password_generator/pull/6
+- Bump Microsoft.NET.Test.Sdk from 16.11.0 to 17.1.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/5
+- Bump actions/checkout from 2 to 3 by @dependabot in https://github.com/solairen/password_generator/pull/4
+- Bump coverlet.collector from 3.1.0 to 3.1.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/3
+ 
+2023-05-23
+----------
+
+- Bump Microsoft.NET.Test.Sdk from 17.1.0 to 17.2.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/11
+- Bump docker/login-action from 1 to 2 by @dependabot in https://github.com/solairen/password_generator/pull/10
+- Bump docker/build-push-action from 2 to 3 by @dependabot in https://github.com/solairen/password_generator/pull/9
+- Bump CommandLineParser from 2.8.0 to 2.9.1 in /src by @dependabot in https://github.com/solairen/password_generator/pull/12
+- Bump Microsoft.NET.Test.Sdk from 17.2.0 to 17.3.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/13
+- Bump Microsoft.NET.Test.Sdk from 17.3.0 to 17.3.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/14
+- Bump actions/setup-dotnet from 2 to 3.0.0 by @dependabot in https://github.com/solairen/password_generator/pull/16
+- Bump Microsoft.NET.Test.Sdk from 17.3.1 to 17.3.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/15
+- Bump actions/setup-dotnet from 3.0.0 to 3.0.1 by @dependabot in https://github.com/solairen/password_generator/pull/17
+- Bump actions/setup-dotnet from 3.0.1 to 3.0.2 by @dependabot in https://github.com/solairen/password_generator/pull/18
+- Bump actions/setup-dotnet from 3.0.2 to 3.0.3 by @dependabot in https://github.com/solairen/password_generator/pull/19
+- Bump coverlet.collector from 3.1.2 to 3.2.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/20
+- Bump Microsoft.NET.Test.Sdk from 17.3.2 to 17.4.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/21
+- Bump MSTest.TestFramework from 2.2.10 to 3.0.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/22
+- Bump MSTest.TestAdapter from 2.2.10 to 3.0.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/23
+- Bump Microsoft.NET.Test.Sdk from 17.4.0 to 17.4.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/24
+- Bump MSTest.TestFramework from 3.0.0 to 3.0.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/26
+- Bump MSTest.TestAdapter from 3.0.0 to 3.0.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/25
+- Bump MSTest.TestFramework from 3.0.1 to 3.0.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/28
+- Bump MSTest.TestAdapter from 3.0.1 to 3.0.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/27
+- Bump docker/build-push-action from 3 to 4 by @dependabot in https://github.com/solairen/password_generator/pull/29
+- Bump Microsoft.NET.Test.Sdk from 17.4.1 to 17.5.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/30
+- Bump coverlet.collector from 3.2.0 to 6.0.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/32
+- Bump Microsoft.NET.Test.Sdk from 17.5.0 to 17.6.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/31
+- Refactor by @solairen in https://github.com/solairen/password_generator/pull/33
 
 2024-11-24
 ----------
@@ -69,48 +108,10 @@
 - Bump MSTest.TestAdapter from 3.6.2 to 3.6.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/93
 - Bump MSTest.TestFramework from 3.6.2 to 3.6.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/94
 
-2023-05-23
-----------
+1.4.0 (2024-12-03)
+------------------
 
-- Bump Microsoft.NET.Test.Sdk from 17.1.0 to 17.2.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/11
-- Bump docker/login-action from 1 to 2 by @dependabot in https://github.com/solairen/password_generator/pull/10
-- Bump docker/build-push-action from 2 to 3 by @dependabot in https://github.com/solairen/password_generator/pull/9
-- Bump CommandLineParser from 2.8.0 to 2.9.1 in /src by @dependabot in https://github.com/solairen/password_generator/pull/12
-- Bump Microsoft.NET.Test.Sdk from 17.2.0 to 17.3.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/13
-- Bump Microsoft.NET.Test.Sdk from 17.3.0 to 17.3.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/14
-- Bump actions/setup-dotnet from 2 to 3.0.0 by @dependabot in https://github.com/solairen/password_generator/pull/16
-- Bump Microsoft.NET.Test.Sdk from 17.3.1 to 17.3.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/15
-- Bump actions/setup-dotnet from 3.0.0 to 3.0.1 by @dependabot in https://github.com/solairen/password_generator/pull/17
-- Bump actions/setup-dotnet from 3.0.1 to 3.0.2 by @dependabot in https://github.com/solairen/password_generator/pull/18
-- Bump actions/setup-dotnet from 3.0.2 to 3.0.3 by @dependabot in https://github.com/solairen/password_generator/pull/19
-- Bump coverlet.collector from 3.1.2 to 3.2.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/20
-- Bump Microsoft.NET.Test.Sdk from 17.3.2 to 17.4.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/21
-- Bump MSTest.TestFramework from 2.2.10 to 3.0.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/22
-- Bump MSTest.TestAdapter from 2.2.10 to 3.0.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/23
-- Bump Microsoft.NET.Test.Sdk from 17.4.0 to 17.4.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/24
-- Bump MSTest.TestFramework from 3.0.0 to 3.0.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/26
-- Bump MSTest.TestAdapter from 3.0.0 to 3.0.1 in /test by @dependabot in https://github.com/solairen/password_generator/pull/25
-- Bump MSTest.TestFramework from 3.0.1 to 3.0.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/28
-- Bump MSTest.TestAdapter from 3.0.1 to 3.0.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/27
-- Bump docker/build-push-action from 3 to 4 by @dependabot in https://github.com/solairen/password_generator/pull/29
-- Bump Microsoft.NET.Test.Sdk from 17.4.1 to 17.5.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/30
-- Bump coverlet.collector from 3.2.0 to 6.0.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/32
-- Bump Microsoft.NET.Test.Sdk from 17.5.0 to 17.6.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/31
-- Refactor by @solairen in https://github.com/solairen/password_generator/pull/33
-
-2022-05-01
-----------
-
-- changed workflow by @solairen in https://github.com/solairen/password_generator/pull/1
-- Changed netCore to 6.0 by @solairen in https://github.com/solairen/password_generator/pull/2
-- Bump MSTest.TestFramework from 2.2.7 to 2.2.10 in /test by @dependabot in https://github.com/solairen/password_generator/pull/8
-- Bump MSTest.TestAdapter from 2.2.7 to 2.2.10 in /test by @dependabot in https://github.com/solairen/password_generator/pull/7
-- Bump github/codeql-action from 1 to 2 by @dependabot in https://github.com/solairen/password_generator/pull/6
-- Bump Microsoft.NET.Test.Sdk from 16.11.0 to 17.1.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/5
-- Bump actions/checkout from 2 to 3 by @dependabot in https://github.com/solairen/password_generator/pull/4
-- Bump coverlet.collector from 3.1.0 to 3.1.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/3
-
-2021-05-29
-----------
-
-- Initial release
+- GH-99 Modify ISSUE_TEMPLATE by @solairen in https://github.com/solairen/password_generator/pull/101
+- GH-100 Add ghcr.io as docker package by @solairen in https://github.com/solairen/password_generator/pull/102
+- GH-103 Add support for ARM by @solairen in https://github.com/solairen/password_generator/pull/104
+- GH-105 [Bug]: Wrong app version by @solairen in https://github.com/solairen/password_generator/pull/105
