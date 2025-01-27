@@ -1,5 +1,54 @@
 {
-  "omnisharp.useModernNet": true,
+  // Other
   "iis.configDir": "",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  // GitHub
+  "githubIssues.queries": [
+    {
+      "label": "Open Issues",
+      "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+    },
+    {
+      "label": "Closed Issues",
+      "query": "state:closed repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "githubPullRequests.pullBranch": "prompt",
+  "github-actions.workflows.pinned.refresh.enabled": true,
+  "github-actions.workflows.pinned.refresh.interval": 1,
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    },
+    {
+      "label": "Closed",
+      "query": "is:closed author:${user}"
+    }
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "typescript": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  // netCore
+  "omnisharp.useModernNet": true,
+  "csharp.suppressBuildAssetsNotification": true,
+  "csharp.suppressDotnetInstallWarning": true,
+  "csharp.suppressDotnetRestoreNotification": true,
+  "dotnet-test-explorer.enableTelemetry": false,
+  "powershell.integratedConsole.showOnStartup": false,
+  // WhiteSpace
+  "diffEditor.ignoreTrimWhitespace": false
 }
