@@ -132,3 +132,12 @@
 
 
 **Full Changelog**: https://github.com/solairen/password_generator/compare/1.4.0...1.5.0
+
+## 1.5.1
+
+## What's Changed
+* Bump MSTest.TestFramework from 3.7.2 to 3.7.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/117
+* Bump MSTest.TestAdapter from 3.7.2 to 3.7.3 in /test by @dependabot in https://github.com/solairen/password_generator/pull/118
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.0...1.5.1
