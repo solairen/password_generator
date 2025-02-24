@@ -150,3 +150,13 @@
 
 
 **Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.1...1.5.2
+
+## 1.5.3
+
+## What's Changed
+* Bump MSTest.TestAdapter from 3.8.0 to 3.8.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/123
+* Bump MSTest.TestFramework from 3.8.0 to 3.8.2 in /test by @dependabot in https://github.com/solairen/password_generator/pull/121
+* Bump Microsoft.NET.Test.Sdk from 17.12.0 to 17.13.0 in /test by @dependabot in https://github.com/solairen/password_generator/pull/122
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.2...1.5.3
