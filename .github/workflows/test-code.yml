@@ -23,7 +23,7 @@ jobs:
         ref: ${{ github.ref }}
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Run test
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: "9.0.x"
     - run: dotnet test test/test.csproj
