@@ -1,0 +1,53 @@
+# Pre-commit hooks configuration
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+repos:
+  # General pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # Prevent commits to protected branches (main/master)
+      - id: no-commit-to-branch
+        args: ['--branch', 'main', '--branch', 'master']
+
+      # Prevent giant files from being committed
+      - id: check-added-large-files
+        args: ['--maxkb=1024']
+
+      # Check for files that would conflict on case-insensitive filesystems
+      - id: check-case-conflict
+
+      # Check for merge conflict strings
+      - id: check-merge-conflict
+
+      # Validate XML syntax (for .csproj files)
+      - id: check-xml
+
+      # Validate YAML syntax (for GitHub Actions workflows)
+      - id: check-yaml
+        args: ['--allow-multiple-documents']
+
+      # Detect private keys
+      - id: detect-private-key
+
+      # Ensure files end with a newline
+      - id: end-of-file-fixer
+
+      # Remove trailing whitespace (preserve markdown hard linebreaks)
+      - id: trailing-whitespace
+        args: ['--markdown-linebreak-ext=md']
+
+      # Normalize line endings
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+      # Remove UTF-8 byte order marker
+      - id: fix-byte-order-marker
+
+  # Markdown linting
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.47.0
+    hooks:
+      - id: markdownlint
+        args: ['--fix']

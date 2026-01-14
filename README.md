@@ -1,15 +1,15 @@
 ## Password generator
 
-### About:
+### About
 
 Simple application that generates passwords with specific lenghts and special characters.
 
-### Language and Framework:
+### Language and Framework
 
 * Language: C#
 * Framework: netCore 9.0
 
-#### To build docker container:
+#### To build docker container
 
 * OS in the container: Linux
 
@@ -19,11 +19,11 @@ Simple application that generates passwords with specific lenghts and special ch
 dotnet build -t password-generator:latest .
 ```
 
-### To pull image from docker hub:
+### To pull image from docker hub
 
 * docker pull moleszek/password-generator:<x.x>
 
-### Usage:
+### Usage
 
 * Withouth special characters:
 
