@@ -156,3 +156,25 @@
 - Bump Microsoft.NET.Test.Sdk from 17.12.0 to 17.13.0 in /test by @dependabot in <https://github.com/solairen/password_generator/pull/122>
 
 **Full Changelog**: <https://github.com/solairen/password_generator/compare/1.5.2...1.5.3>
+
+
+## 1.5.5
+
+## What's Changed
+* Bump MSTest.TestFramework from 4.0.2 to 4.1.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/156
+* Bump MSTest.TestAdapter from 4.0.2 to 4.1.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/158
+* Bump coverlet.collector from 6.0.4 to 8.0.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/157
+* Bump Microsoft.NET.Test.Sdk from 18.0.1 to 18.3.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/159
+* Bump docker/setup-qemu-action from 3 to 4 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/163
+* Bump docker/login-action from 3 to 4 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/162
+* Bump docker/build-push-action from 6 to 7 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/161
+* Bump docker/setup-buildx-action from 3 to 4 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/160
+* Bump coverlet.collector from 8.0.0 to 8.0.1 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/164
+* Bump MSTest.TestFramework from 4.1.0 to 4.2.1 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/168
+* Bump Microsoft.NET.Test.Sdk from 18.3.0 to 18.4.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/166
+* Bump softprops/action-gh-release from 2 to 3 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/165
+* GH-153 [Bug]: Dependabot dotnet error by @solairen in https://github.com/solairen/password_generator/pull/169
+* Update update-changelog.yml by @solairen in https://github.com/solairen/password_generator/pull/170
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.4...1.5.5
