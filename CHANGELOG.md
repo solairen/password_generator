@@ -191,3 +191,21 @@
 
 
 **Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.5...1.5.6
+
+## 1.5.7
+
+## What's Changed
+* Bump coverlet.collector from 10.0.0 to 10.0.1 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/178
+* Bump MSTest.TestAdapter and MSTest.TestFramework by @dependabot[bot] in https://github.com/solairen/password_generator/pull/179
+* Bump Microsoft.NET.Test.Sdk from 18.5.1 to 18.6.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/181
+* Bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/183
+* Bump Microsoft.NET.Test.Sdk from 18.6.0 to 18.7.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/184
+* Bump dotnet-sdk from 10.0.300 to 10.0.301 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/182
+* Bump MSTest.TestFramework from 4.2.3 to 4.3.2 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/186
+* Bump actions/setup-dotnet from 5 to 6 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/187
+* Bump Microsoft.NET.Test.Sdk from 18.7.0 to 18.8.1 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/189
+* Bump MSTest.TestAdapter from 4.2.3 to 4.3.2 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/190
+* Bump dotnet-sdk from 10.0.301 to 10.0.302 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/188
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.6...1.5.7
