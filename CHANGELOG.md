@@ -209,3 +209,18 @@
 
 
 **Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.6...1.5.7
+
+## 1.5.8
+
+## What's Changed
+* Bump github/codeql-action from 4 to 4.37.4 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/193
+* Bump MSTest.TestFramework from 4.3.2 to 4.3.3 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/192
+* Bump github/codeql-action from 4.37.4 to 4.37.7 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/198
+* Bump Microsoft.NET.Test.Sdk from 18.8.1 to 18.9.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/197
+* Bump dotnet-sdk from 10.0.302 to 10.0.400 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/196
+* Bump MSTest.TestAdapter from 4.3.2 to 4.3.3 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/194
+* Bump solairen/ruleset-trigger from 1.0.5 to 1.0.6 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/201
+* Bump github/codeql-action from 4.37.7 to 4.37.9 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/200
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.7...1.5.8
