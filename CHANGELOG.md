@@ -236,3 +236,13 @@
 
 
 **Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.8...1.5.9
+
+## 1.5.10
+
+## What's Changed
+* Bump MSTest.TestAdapter from 4.4.0 to 4.4.1 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/213
+* Bump coverlet.collector from 10.0.1 to 10.1.0 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/211
+* Bump github/codeql-action from 4.38.1 to 4.38.2 by @dependabot[bot] in https://github.com/solairen/password_generator/pull/212
+
+
+**Full Changelog**: https://github.com/solairen/password_generator/compare/1.5.9...1.5.10
